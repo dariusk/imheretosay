@@ -11,7 +11,7 @@ function generate(nounPlural, verb) {
   nounPlural = nounPlural || nouns.pick().pluralize();
   verb = verb || JSON.parse(names).pick();
   var generatedText = 'My name is ' + verb.titleize() + ' and I\'m here to say<br>I love ' + nounPlural + ' in a major way';
-  var sharedText = verb + ' ALL the ' + nounPlural;
+  var sharedText = 'My name is ' + verb.titleize() + ' and I\'m here to say... #imheretosay';
   $('#content').html(generatedText);
   var shareUrl = window.location.href.split('?')[0]+'?word='+sharing.encodeStr(verb)+'$'+sharing.encodeStr(nounPlural);
   $('#share').attr('href', shareUrl);
